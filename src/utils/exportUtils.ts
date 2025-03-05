@@ -13,7 +13,7 @@ const createProjectFiles = () => {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>qualityveda-attendance-hub</title>
-    <meta name="description" content="QualityVeda Attendance Management System" />
+    <meta name="description" content="Qualityveda Attendance Management System" />
   </head>
   <body>
     <div id="root"></div>
@@ -76,7 +76,7 @@ const createProjectFiles = () => {
       }
     }, null, 2),
     
-    'README.md': `# QualityVeda Attendance Management System
+    'README.md': `# Qualityveda Attendance Management System
 
 ## Project Overview
 A complete attendance management system built with React, TypeScript, and Tailwind CSS. This project allows users to mark attendance, view history, and includes an admin panel for managing labs and trainings.

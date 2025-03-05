@@ -47,7 +47,7 @@ const Index = () => {
     navigate("/dashboard");
     
     toast({
-      title: "Welcome to QualityVeda",
+      title: "Welcome to Qualityveda",
       description: `Hello, ${name}!`,
     });
   };
