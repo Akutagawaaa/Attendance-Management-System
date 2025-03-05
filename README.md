@@ -1,69 +1,134 @@
-# Welcome to your Lovable project
+**QualityVeda Attendance Management System**
 
-## Project info
+📌 Introduction
 
-**URL**: https://lovable.dev/projects/ce4459b9-822f-49e5-8b4e-c9ad8a3e2ab2
+The QualityVeda Attendance Management System is a web-based platform designed for seamless attendance tracking for employees as well  medical training programs. It allows users to mark attendance, view attendance history, and manage training sessions, while administrators have full control over attendance records, user management, and data export.
 
-## How can I edit this code?
+🚀 Features
 
-There are several ways of editing your application.
+✅ User Features
 
-**Use Lovable**
+Google Sign-In for authentication.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ce4459b9-822f-49e5-8b4e-c9ad8a3e2ab2) and start prompting.
+Mark Attendance (Once per training per day).
 
-Changes made via Lovable will be committed automatically to this repo.
+View Attendance History.
 
-**Use your preferred IDE**
+Lab Selection with warnings before changing.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Email Confirmation upon attendance submission.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✅ Admin Features
 
-Follow these steps:
+Admin Dashboard for managing users & attendance.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Export Attendance Records (Lab-wise, Date-wise, User-wise) to CSV.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Modify Trainings & Labs dynamically.
 
-# Step 3: Install the necessary dependencies.
-npm i
+View Attendance Statistics.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🎯 Tech Stack
 
-**Edit a file directly in GitHub**
+TECHNOLOGY                  PURPOSE
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+React.js                    Frontend Development
+Tailwind CSS                UI Styling
+Node.js + Express.js        Backend Development  
+POstgreSQL (Neon)           Database Management
+Vercel                      Deployment
+Brevo SMTP                  Email Notifications
 
-**Use GitHub Codespaces**
+🛠️ Installation & Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1️⃣ Clone the Repository
 
-## What technologies are used for this project?
+git clone https://github.com/YOUR_GITHUB_USERNAME/qualityveda-attendance.git
+cd qualityveda-attendance
 
-This project is built with .
+2️⃣ Backend Setup
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+cd backend
+npm install
+cp .env.example .env  # Fill in environment variables
+node server.js  # Start the backend
 
-## How can I deploy this project?
+3️⃣ Frontend Setup
 
-Simply open [Lovable](https://lovable.dev/projects/ce4459b9-822f-49e5-8b4e-c9ad8a3e2ab2) and click on Share -> Publish.
+cd ../frontend
+npm install
+npm run dev  # Start the frontend
 
-## I want to use a custom domain - is that possible?
+4️⃣ Environment Variables (.env)
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Create a .env file in both backend/ and frontend/ directories with:
+
+Backend .env
+
+PORT=5000
+DATABASE_URL=your_neon_postgres_url
+VITE_BREVO_SMTP_HOST=smtp-relay.brevo.com
+VITE_BREVO_SMTP_PORT=587
+VITE_BREVO_SMTP_USER=your_smtp_user
+VITE_BREVO_SMTP_PASS=your_smtp_password
+VITE_BREVO_SENDER_EMAIL=your_verified_email
+
+Frontend .env
+
+VITE_API_BASE_URL=https://your-backend.vercel.app
+
+🚀 Deployment
+
+1️⃣ Deploy Backend on Vercel
+
+cd backend
+vercel --prod
+
+2️⃣ Deploy Frontend on Vercel
+
+cd ../frontend
+vercel --prod
+
+🔗 API Endpoints
+
+Method
+
+Endpoint
+
+Description
+
+POST
+
+/api/mark-attendance
+
+Mark attendance
+
+GET
+
+/api/attendance
+
+Get attendance records
+
+POST
+
+/send-email
+
+Send OTP verification email
+
+👨‍💻 Contributing
+
+Fork the repo & create a new branch (git checkout -b feature-branch).
+
+Make your changes & commit (git commit -m "Added new feature").
+
+Push to your fork (git push origin feature-branch).
+
+Submit a Pull Request 🚀
+
+📜 License
+
+This project is open-source and available under the MIT License.
+
+🤝 Contact
+
+For any issues or feature requests, feel free to open an issue or contact Akutagawaaa.
